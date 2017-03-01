@@ -15,9 +15,14 @@
 // Route::resource('/kr/one3/pattern', 'One3PatternController');
 
 
-DB::listen(function ($query){
-    var_dump($query->sql);
-});
+// Event::listen('article.created', function($article){
+//     var_dump('이벤트를 받음 데이터는 아래와 같다.');
+//     var_dump($article->toArray());
+// });
+
+// DB::listen(function ($query){
+//     var_dump($query->sql);
+// });
 
 Route::get('auth/login', function(){
     $credential = [
